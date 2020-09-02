@@ -10,7 +10,7 @@ const forecast = (longitude, latitude, callback) => {
             callback('Invalid coordinates', undefined)
         } else {
             callback(undefined, 
-                body.current.temperature + ' graden'
+                body.current.temperature + ' degrees, but feels like ' + body.current.feelslike + ' degrees' 
             )
         }
     })
