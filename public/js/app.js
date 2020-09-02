@@ -1,5 +1,3 @@
-console.log('client side js')
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1') // querying by id -> #
@@ -12,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-    
+
     // Running in client side js -> fetch accessible
     fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((data) => {
